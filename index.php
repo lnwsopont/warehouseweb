@@ -6,6 +6,7 @@ error_reporting(~0);
 include 'helpers/Router.php';
 include 'helpers/fn.php';
 include 'database/Database.php';
+include 'controllers/BaseController.php';
 
 $router = new Router();
 include 'router.php';

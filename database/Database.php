@@ -10,11 +10,11 @@ class Database{
 	
 	function __construct(){
 		$servername = "localhost";
-		$username = "team";
-		$password = "1234";
-
+		$username = "root";
+		$password = "root1234";
+                $dbname = "myisproj_warehouse";
 		// Create connection
-		$this->conn = mysqli_connect($servername, $username, $password, "speciali_main");
+		$this->conn = mysqli_connect($servername, $username, $password,$dbname);
 	}
 	
 	function read($sql){

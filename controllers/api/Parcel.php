@@ -1,6 +1,6 @@
 <?php
 
-class Parcel {
+class Parcel extends BaseController {
 	
 	function info($parcel_id){
 		
