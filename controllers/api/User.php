@@ -40,6 +40,8 @@ class User extends BaseController {
                'exist' => FALSE
            ]);
        }
+        unset($user['emp_password']);
+        unset($user['emp_status']);
        return json([
            'exist' => TRUE,
            'info' => $user
