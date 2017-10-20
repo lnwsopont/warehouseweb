@@ -1,13 +1,13 @@
 <?php
 
 class Database{
-	
+
 	private $conn;
-	
+
 	static function create(){
 		return new Database();
 	}
-	
+
 	function __construct(){
 		$servername = "localhost";
 		$username = "root";
@@ -16,25 +16,25 @@ class Database{
 		// Create connection
 		$this->conn = mysqli_connect($servername, $username, $password,$dbname);
 	}
-	
+
 	function read($sql){
-		
+
 		$arr = [];
-		
+
 		$result = mysqli_query($this->conn, $sql);
-		if (mysqli_num_rows($result) > 0) {
+		if ($result && mysqli_num_rows($result) > 0) {
 			// output data of each row
 			while($row = mysqli_fetch_assoc($result)) {
 				$arr[] = $row;
 			}
-		} 
-		
+		}
+
 		return $arr;
 	}
-	
+
 	function write($sql){
 		mysqli_query($this->conn, $sql);
 		return mysqli_affected_rows($this->conn);
 	}
-	
+
 }
