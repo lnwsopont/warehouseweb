@@ -1,0 +1,16 @@
+diff a/views/qr_test.php b/views/qr_test.php	(rejected hunks)
+@@ -0,0 +1,13 @@
++<script src="/assets/qrcode.js"></script>
++
++<div id="qrcode"></div>
++
++<script>
++    
++    var qrcode = new QRCode(document.getElementById("qrcode"), {
++        width: 100,
++        height: 100
++    });
++    qrcode.makeCode('<?=$txt?>');
++
++</script>
+\ No newline at end of file
