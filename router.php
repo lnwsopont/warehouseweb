@@ -10,5 +10,8 @@ $router->any("/api/user/login", "api/User.login");
 $router->any("/api/user/logout", "api/User.logout");
 
 
+$router->any("/", "Home.index");
 $router->any("/login", "User.login");
-$router->any("/user/console", "User.console");
+$router->any("/user/profile", "User.console");
+$router->any("/parcel/add", "Parcel.add");
+$router->any("/qr", "Qr.test");
