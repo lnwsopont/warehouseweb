@@ -36,5 +36,9 @@ class Database{
 		mysqli_query($this->conn, $sql);
 		return mysqli_affected_rows($this->conn);
 	}
+        
+        function insertId(){
+            return intval(mysqli_insert_id($this->conn));
+        }
 
 }

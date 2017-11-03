@@ -10,8 +10,9 @@ class User extends BaseController{
             $list = $this->db->read("select * from employee where emp_id = '$username' and emp_password = '$password'");
             if(count($list) == 1){
                 $_SESSION['user'] = $list[0];
+                $_SESSION['user_type'] = 'employee';
                 unset($_SESSION['user']['emp_password']);
-                redirect("/user/console");
+                redirect("/user/profile");
             }
             else{
                 View::display('login', [
@@ -27,7 +28,12 @@ class User extends BaseController{
 
     }
 
-    function console(){
+    function profile(){
         echo 'this is console';
+    }
+    
+    function logout(){
+        unset($_SESSION['user']);
+        return redirect("/");
     }
 }
