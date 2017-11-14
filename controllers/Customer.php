@@ -9,17 +9,23 @@
 class Customer extends BaseController {
 
     function home() {
-        echo "<a href='/booking'>Booking</a>";
+        echo "<a href='/product'>Product</a><br>";
+        echo "<a href='/history'>History</a><br>";
+        echo "<a href='/booking'>Booking</a><br>";
+        echo "<a href='/order'>Order</a><br>";
+        echo "<a href='/enquiry'>Enquiry</a>";
     }
 
     function product() {
-        $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']}");
+        $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3");
         echo '<pre>';
         print_r($list);
     }
 
     function history() {
-        
+        $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status=3");
+        echo '<pre>';
+        print_r($list);
     }
 
     function booking() {
@@ -50,6 +56,7 @@ class Customer extends BaseController {
     }
 
     function order() {
+        
         
     }
 
