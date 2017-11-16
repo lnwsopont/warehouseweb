@@ -6,7 +6,7 @@
             <td>Parcel Description</td>
             <td>Shelf Number</td>
             <td>Parcel checkin Date</td>
-            <td>Booking Number</td>
+            <td>Booking Number</td> 
             <td>Booking Date</td>
         </tr>
 <?php
