@@ -17,13 +17,13 @@ class Customer extends BaseController {
     }
 
     function product() {
-        $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3");
+        $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3 order by booking_date desc");
         echo '<pre>';
         print_r($list);
     }
 
     function history() {
-        $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status=3");
+        $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status=3 order by parcel_outtdate desc");
         echo '<pre>';
         print_r($list);
     }
@@ -56,8 +56,9 @@ class Customer extends BaseController {
     }
 
     function order() {
-        
-        
+      $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3 order by booking_date desc");
+      
+     View::display('orderout',['parcel'=> $list]);  
     }
 
     function enquiry() {
