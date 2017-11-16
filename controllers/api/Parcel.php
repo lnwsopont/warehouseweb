@@ -5,6 +5,21 @@ class Parcel extends BaseController {
     const STATUS_CHECKIN = 1;
     const STATUS_CHECKOUT = 2;
 
+    function submit() {
+        $ids = $_POST['parcel_ids'];
+        $ids = explode(',', $ids);
+        $ids = array_map(function($x) {
+            return intval($x);
+        }, $ids);
+        $ids = array_filter($ids);
+        $ids_in = implode(',', $ids);
+        $ack = $this->db->write("update parcel set parcel_status = parcel_status + 1 where parcel_id in ($ids_in)");
+
+        return json([
+            'status' => $ack ? true:false,
+        ]);
+    }
+
     function info($parcel_id) {
         $list = $this->db->read("SELECT * FROM `parcel` WHERE `parcel_id` = $parcel_id");
 
