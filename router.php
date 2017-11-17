@@ -1,5 +1,5 @@
 <?php
-
+$router->any("/api/parcel/submit/", "api/Parcel.submit");
 $router->any("/api/parcel/:any/", "api/Parcel.info");
 $router->any("/api/parcel/:any/shelf", "api/Parcel.shelf");
 $router->any("/api/parcel/:any/checkin", "api/Parcel.checkin");
@@ -8,7 +8,7 @@ $router->any("/api/parcel/:any/checkout", "api/Parcel.checkout");
 $router->any("/api/user/:num/", "api/User.info");
 $router->any("/api/user/login", "api/User.login");
 $router->any("/api/user/logout", "api/User.logout");
-
+$router->any("api/user/task","api/User.task");
 
 $router->any("/", "Home.index");
 $router->any("/login", "User.login");
@@ -25,11 +25,13 @@ if (isCustomer()) {
     $router->any("/enquiry", "Customer.enquiry");
 }
 if (isEmployee()) {
-    $router->any("/", "Employee.report");
-    $router->any("/parcel/add", "Parcel.add");
+    //$router->any("/", "Employee.report");
+    $router->any("/parcel/receive", "Employee.receive");
     $router->any("/payment", "Employee.transaction");
     $router->any("/reply", "Employee.reply");
     $router->any("/add_cus", "Employee.addCustomer");
     $router->any("/add_emp", "Employee.addEmployee");
     $router->any("/update_emp", "Employee.updateEmployee");
 }
+
+$router->any("/admin","admin/Admin.index");

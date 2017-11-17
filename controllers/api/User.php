@@ -61,5 +61,28 @@ class User extends BaseController {
     function changePin() {
         
     }
+    
+    function task(){
+        return json([
+            'tasks' => [
+                [
+                    'id' => 12,
+                    'desc' => 'Parcel ID: 999 @Shelf A4'
+                ],
+                [
+                    'id' => 123,
+                    'desc' => 'Parcel ID: 997 @Shelf A5'
+                ],
+                [
+                    'id' => 1234,
+                    'desc' => 'Parcel ID: 996 @Shelf A6'
+                ],
+                [
+                    'id' => 12345,
+                    'desc' => 'Parcel ID: 998 @Shelf A7'
+                ],
+            ]
+        ]);
+    }
 
 }
