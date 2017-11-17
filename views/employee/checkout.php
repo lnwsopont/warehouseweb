@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title></title>
+        <!-- Compiled and minified CSS -->
+        <script
+            src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    </head>
+    
+    <body>
+        
+        <div class ="container">
+            
+            <div class ="row">
+                <div class="col s12">
+                    <h1>Parcel Check-out</h1>
+                </div>
+           
+            </div>
+            
+            <div class ="row">
+                <div class="col s12">
+                    <table>
+                        <thead>
+                            <td></td>
+                            <td> <? echo "Parcel ID"?></td>
+                             <td><? echo "Parcel Description"?> </td>
+                            <td> <? echo "Customer ID"?> </td>
+                            <td><? echo "Shelf Code" ?></td>
+                            <td><? echo "Parcel Indate"?></td>
+                             <td><? echo "Booking date" ?> </td>
+                        </thead>
+                  <? foreach($parcel_all as $parcels): ?>
+                        <tr>
+                            <td><input type="checkbox" name="parcel" value=<?$parcels['parcel_id']?>>
+                            <td><? echo $parcels['parcel_id']?></td>
+                            <td><? echo $parcels['parcel_des']?></td>
+                            <td><? echo $parcels['cus_id']?></td>
+                            <td><? echo $parcels['shelf_code']?> </td>
+                            <td><? echo $parcels['parcel_indate']?></td>
+                             <td><? echo $parcels['booking_date']?></td>
+                        </tr>
+                    
+                    <? endforeach; ?>
+                    </table>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        
+        
+        
+        
+    </body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</html>

@@ -1,4 +1,3 @@
-<?php
 
 class View {
     public static function display($view_name, $data = []){

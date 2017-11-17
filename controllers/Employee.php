@@ -3,6 +3,53 @@
 class Employee extends BaseController {
 
     const PARCEL_STATUS_WAITING = 0;
+    
+    
+    
+    function editemployee(){
+        
+        
+        $emp = $this->db->read("select * from employee");
+                
+              
+        View::display('employee/edit_employee', [
+             'emp_all' => $emp
+           
+        ]);
+       
+    }
+    
+    
+    function editcustomers(){
+        
+        $cus = $this->db->read("select * from customer");
+        
+        
+         View::display('employee/edit_customer', [
+             'cus_all' => $cus
+           
+        ]);
+}
+    
+    
+    
+    
+    
+    
+    
+    function checkout(){
+        
+        $parcel_all = $this->db->read("select * from parcel where parcel_status = 2");
+        
+        
+       
+         View::display('employee/checkout', [
+             'parcel_all' => $parcel_all
+           
+        ]);
+        
+        
+    }
 
     function receive() {
 
@@ -12,6 +59,7 @@ class Employee extends BaseController {
 
             $cusid = $_POST['cus_id'];
             $bookid = $_POST['booking_code'];
+            $shelf = $_POST['shelf_code'];
 
             $list = $this->db->read("select * from parcel where cus_id = $cusid and booking_code = '$bookid'");
             if (empty($list)) {
@@ -31,7 +79,8 @@ class Employee extends BaseController {
                 ]);
                 return;
             }
-            $this->db->write("update parcel set parcel_status = 1 where parcel_id = $parcelid ");
+            $this->db->write("update parcel set parcel_status = 1 , shelf_code = '$shelf',parcel_indate = NOW()  where parcel_id = $parcelid ");
+            $this->db->write("update shelf set shelf_code =1");
             View::display('employee/receive', [
                 'parcel_id' => $parcelid,
                 'shelfs' => $shelfs
