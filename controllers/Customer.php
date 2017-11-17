@@ -17,13 +17,13 @@ class Customer extends BaseController {
     }
 
     function product() {
-        $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3 order by booking_date desc");
+        $list = $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3 order by booking_date desc");
         echo '<pre>';
         print_r($list);
     }
 
     function history() {
-        $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status=3 order by parcel_outtdate desc");
+        $list = $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status=3 order by parcel_outtdate desc");
         echo '<pre>';
         print_r($list);
     }
@@ -48,21 +48,47 @@ class Customer extends BaseController {
                     parcel_type ='{$_POST['parcel_type']}',
                     booking_code = '$booking_code'
                 ");
-                    
+
             redirect("/product");
         }
 
         View::display('customer_booking');
     }
 
-    function order() {
-      $list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3 order by booking_date desc");
-      
-     View::display('orderout',['parcel'=> $list]);  
-    }
+    //function order() {
+    //$list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3 order by booking_date desc");
+    //View::display('orderout',['parcel'=> $list]);  
+    // }
 
     function enquiry() {
-        
+
+        if (isset($_POST["message"])) {
+            $msg = $_POST["message"];
+            $this->db->write("
+              Insert into private_msg 
+              set 
+                cus_id={$_SESSION['user']['cus_id']} , 
+                msg= '$msg' , 
+                sent_datetime=now(),
+                status=2
+              ");
+        }
+
+        $list = $this->db->read("
+            select * 
+            from private_msg pm left join employee e on pm.emp_id=e.emp_id
+            where cus_id = {$_SESSION['user']['cus_id']} order by sent_datetime desc
+            ");
+
+        $this->db->write("Update private_msg
+            set status=1 
+            where cus_id = {$_SESSION['user']['cus_id']}            
+            ");
+
+
+        View::display("enquiry", [
+            "messages" => $list
+        ]);
     }
 
 }
