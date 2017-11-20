@@ -9,10 +9,10 @@
 class Customer extends BaseController {
 
     function home() {
+        echo "<a href='/product'>Home</a><br>";
         echo "<a href='/product'>Product</a><br>";
         echo "<a href='/history'>History</a><br>";
         echo "<a href='/booking'>Booking</a><br>";
-        echo "<a href='/order'>Order</a><br>";
         echo "<a href='/enquiry'>Enquiry</a>";
     }
 
