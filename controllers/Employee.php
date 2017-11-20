@@ -7,21 +7,24 @@ class Employee extends BaseController {
     function editemployee() {
 
         if (isset($_GET) && $_GET['act'] == 'search') {
-            $int = (int)$_GET['search'];
+            $int = (int) $_GET['search'];
             $emp = $this->db->read("select * from employee where emp_id = $int");
         } else {
             $emp = $this->db->read("select * from employee");
         }
+    }
 
+    function editparcel() {
 
-        View::display('employee/edit_employee', [
-            'emp' => $emp
+        $parcel = $this->db->read("select * from parcel");
+
+        View::display('employee/edit_parcel', [
+            'parcel' => $parcel
         ]);
     }
-    
-    function editform(){
+
+    function editform() {
         View::display('employee/emp_cus_edit_form', [
-           
         ]);
     }
 
