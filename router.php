@@ -28,6 +28,7 @@ if (isEmployee()) {
     //$router->any("/", "Employee.report");
     $router->any("/parcel/receive", "Employee.receive");
     $router->any("/edit/form", "Employee.editform");
+    $router->any("/edit/parcel", "Employee.editparcel");
     $router->any("/edit/employee", "Employee.editemployee");
     $router->any("/edit/customer", "Employee.editcustomer");
     $router->any("/parcel/checkout", "Employee.checkout");
