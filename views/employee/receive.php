@@ -1,15 +1,6 @@
-<html>
-    <head>
-        <title></title>
-        <!-- Compiled and minified CSS -->
-        <script
-            src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<? View::display('employee/header',[]); ?>
+    
 
-    </head>
     <body>
         <div class="container">
             <!-- Page Content goes here -->
@@ -76,4 +67,4 @@
             </form>
         </div>
     </body>
-</html>
+
