@@ -5,15 +5,17 @@
 // $router->any("/history", "Customer.history");
 // $router->any("/order", "Customer.order");
 // $router->any("/enquiry", "Customer.enquiry");
-
-class Customer extends BaseController {
-
-    function home() {
-        echo "<a href='/product'>Home</a><br>";
+echo "<a href='/product'>Home</a><br>";
         echo "<a href='/product'>Product</a><br>";
         echo "<a href='/history'>History</a><br>";
         echo "<a href='/booking'>Booking</a><br>";
         echo "<a href='/enquiry'>Enquiry</a>";
+class Customer extends BaseController {
+        
+    function home() {
+        $list = $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3 order by booking_date desc");
+        echo '<pre>';
+        print_r($list);
     }
 
     function product() {

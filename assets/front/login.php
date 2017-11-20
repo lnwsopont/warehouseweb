@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Company's Name</title>
-	<link rel = "stylesheet" type="text/css" href="assets/front/style.css">
+	<link rel = "stylesheet" type="text/css" href="style.css">
 </head>
 <body class="bg">
 <p id="demo"></p>
@@ -12,22 +12,27 @@
 		<a href="javascript:(0)" class="select" onclick="hide1()">LOGIN</a>
 	<!--	</li>
 	</ul>-->
-</div>  
-    
+</div>
 	<div id="flogin" class="login-form" style="display:none">
-         <!--<?php //if($login_fail): ?>
-         <div style="color: #fff">user or password wrong!</div>
-         <?php //endif; ?>-->
-    	<form action = "/login" method = "post">
-        	Username: <input type="text" name="username" value="">
+    	<form action="#">
+        	Username: <input type="text" name="user" value="">
             <br><br>
-            Password: <input type="password" name="password" value="">
+            Password: <input type="text" name="pwd" value="">
             <br><br>
             <button type="submit" value="Submit">Login</button>
 		</form><br>
         <a href="javascript:(0)" class="back" onclick="hide1()">Back</a>
 	</div>
     <br><br>
+<div id="sno" class="mainmenu-serial"><a href="javascript:(0)" class="select" onclick="hide2()">SERIAL NUMBER</a></div>
+    <div id="fsno" class="serial-form" style="display:none">
+    	<form action="#">
+        	Serial Number: <input type="text" name="snumber" value="">
+            <button type="submit" value="Submit">Next</button>
+		</form><br><br>
+        <a href="javascript:(0)" class="back" onclick="hide2()">Back</a>
+	</div>
+    
     
 <script>
 	var l = document.getElementById("login");

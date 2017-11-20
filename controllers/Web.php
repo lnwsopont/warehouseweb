@@ -11,7 +11,7 @@
  *
  * @author Queeny
  */
-class Home extends BaseController {
+class Web extends BaseController {
 
     function index() {
         View::display('home');

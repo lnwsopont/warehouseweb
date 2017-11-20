@@ -10,7 +10,7 @@ $router->any("/api/user/login", "api/User.login");
 $router->any("/api/user/logout", "api/User.logout");
 $router->any("api/user/task","api/User.task");
 
-$router->any("/", "Home.index");
+$router->any("/", "Web.index");
 $router->any("/login", "User.login");
 $router->any("/logout", "User.logout");
 

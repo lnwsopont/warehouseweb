@@ -24,11 +24,11 @@ class User extends BaseController {
                 return redirect("/");
             }
             
-            View::display('login', [
+            View::display('home', [
                 'login_fail' => true
             ]);
         } else {
-            View::display('login', [
+            View::display('home', [
                 'login_fail' => false
             ]);
         }
