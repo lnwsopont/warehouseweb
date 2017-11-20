@@ -13,28 +13,31 @@
              
            
             
-            <div class ="row">
-                <div class="col s12">
-                    <table>
-                        <thead>
-                            <td> <? echo "Customer ID"?></td>
-                             <td><? echo "First Name"?> </td>
-                            <td> <? echo "Last Name"?> </td>
-                            <td><? echo "Tel No" ?></td>
-                            <td><? echo "E-mail"?></td>
-                        </thead>
-                  <? foreach($cus as $cus): ?>
-                        <tr>
-                            <td><? echo $cus['cus_id']?></td>
-                            <td><? echo $cus['cus_fname']?></td>
-                            <td><? echo $cus['cus_lname']?></td>
-                            <td><? echo $cus['cus_tel']?></td>
-                            <td><? echo $cus['cus_email']?></td>
-                        </tr>
-                    
-                    <? endforeach; ?>
-                    </table>
-                </div>
+            <div class="row">  
+            <form class="input-field col s6">
+                <input type="text" name="search" >
+                <input type="submit" name="act" value="search">
+            </form>
+        </div>
+
+
+
+        <div class ="row" id="cus-<? echo $cus['cus_id']; ?>">
+            <div class="col s12">
+                
+                <ul class="collection">
+                    <? foreach ($cus as $cus): ?>
+                    <li class="collection-item avatar">
+                        <img src="images/yuna.jpg" alt="" class="circle">  
+                        <p>
+                           ID: <? echo $cus['cus_id'] ?><br>
+                           Name: <? echo $cus['cus_fname'] ?> 
+                           <? echo $cus['cus_lname'] ?><br>             
+                          Tel:  <? echo $cus['cus_tel'] ?>    
+                           
+                        </p>
+                     
+                            <? endforeach; ?>
             </div>
             
             

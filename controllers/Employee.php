@@ -3,60 +3,54 @@
 class Employee extends BaseController {
 
     const PARCEL_STATUS_WAITING = 0;
-    
-    
-    
-    function editemployee(){
-        
-        
-        $emp = $this->db->read("select * from employee");
-                
-              
+
+    function editemployee() {
+
+        if (isset($_GET) && $_GET['act'] == 'search') {
+            $int = (int)$_GET['search'];
+            $emp = $this->db->read("select * from employee where emp_id = $int");
+        } else {
+            $emp = $this->db->read("select * from employee");
+        }
+
+
         View::display('employee/edit_employee', [
-             'emp' => $emp
-           
+            'emp' => $emp
         ]);
-       
     }
     
-    
-    function editcustomer(){
-        
+    function editform(){
+        View::display('employee/emp_cus_edit_form', [
+           
+        ]);
+    }
+
+    function editcustomer() {
+
         $cus = $this->db->read("select * from customer");
-         
-        
-         View::display('employee/edit_customer', [
-             'cus' => $cus
-           
+
+
+        View::display('employee/edit_customer', [
+            'cus' => $cus
         ]);
-}
-    
-    
-    function addemployee(){
-        
-        
-        View::display('employee/add_customer', [
-             
-           
-        ]);
-        
     }
-    
-    
-    
-    
-    function checkout(){
-        
-        $parcel_all = $this->db->read("select * from parcel where parcel_status = 2");
-        
-        
-       
-         View::display('employee/checkout', [
-             'parcel_all' => $parcel_all
-           
+
+    function addemployee() {
+
+
+        View::display('employee/add_customer', [
         ]);
-        
-        
+    }
+
+    function checkout() {
+
+        $parcel_all = $this->db->read("select * from parcel where parcel_status = 2");
+
+
+
+        View::display('employee/checkout', [
+            'parcel_all' => $parcel_all
+        ]);
     }
 
     function receive() {

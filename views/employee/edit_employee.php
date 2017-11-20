@@ -1,68 +1,75 @@
-<? View::display('employee/header',[]); ?>
-    <body>
-        
-        <div class ="container">
-            
-            <div class ="row">
-                <div class="col s12">
-                    <h1>Edit Employee</h1>
-                </div>
-           
+<? View::display('employee/header', []); ?>
+<body>
+
+    <div class ="container">
+
+        <div class ="row">
+            <div class="col s12">
+                <h1>Edit Employee</h1>
             </div>
-            
-            <div class ="row">
-                <div class="col s12">
-                    <table>
-                        <thead>
-                            <td> <? echo "Employee ID"?></td>
-                             <td><? echo "First Name"?> </td>
-                            <td> <? echo "Last Name"?> </td>
-                            <td><? echo "Status" ?></td>
-                            <td><? echo "Tel"?></td>
-                        </thead>
-                  <? foreach($emp as $emps): ?>
-                        <tr>
-                            <td><? echo $emps['emp_id']?></td>
-                            <td><? echo $emps['emp_fname']?></td>
-                            <td><? echo $emps['emp_lname']?></td>
-                            <? if($emps['emp_status'] == 1)
-                            {?>
-                               <td><? echo "Active";?> </td>
-                            <? }
-                            else{?>
-                                 <td><? echo "Active";?> </td>
-                            <?}?>
-                           
-                            <td><? echo $emps['emp_tel']?></td>
-                        </tr>
-                    
-                    <? endforeach; ?>
-                    </table>
-                </div>
-            </div>
-            
-            
+
         </div>
-        
-        
-        
-        
-        
-    </body>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+        <div class="row">  
+            <form class="input-field col s6">
+                <input type="text" name="search" >
+                <input type="submit" name="act" value="search">
+            </form>
+        </div>
+
+
+
+        <div class ="row">
+
+            <div class="col s12">
+                
+                <ul class="collection">
+                    <? foreach ($emp as $emps): ?>
+                    <li class="collection-item avatar">
+                        <img src="images/yuna.jpg" alt="" class="circle">  
+                        <p>
+                           ID: <? echo $emps['emp_id'] ?><br>
+                           Name: <? echo $emps['emp_fname'] ?> 
+                           <? echo $emps['emp_lname'] ?><br>
+                           Status: <? if ($emps['emp_status'] == 1) {
+                                        ?>
+                                        <? echo "Active"; ?> <br>
+                                    <? } else {
+                                        ?>
+                                        <? echo "In-Active"; ?> <br>
+                                    <? } ?>
+                                        
+                          Tel:  <? echo $emps['emp_tel'] ?>    
+                           
+                        </p>
+                     
+                            <? endforeach; ?>
+
+                        </div>
+                      
+
+
+                        </div>
+
+
+
+
+
+                        </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
