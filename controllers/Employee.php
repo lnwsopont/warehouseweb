@@ -13,26 +13,34 @@ class Employee extends BaseController {
                 
               
         View::display('employee/edit_employee', [
-             'emp_all' => $emp
+             'emp' => $emp
            
         ]);
        
     }
     
     
-    function editcustomers(){
+    function editcustomer(){
         
         $cus = $this->db->read("select * from customer");
-        
+         
         
          View::display('employee/edit_customer', [
-             'cus_all' => $cus
+             'cus' => $cus
            
         ]);
 }
     
     
-    
+    function addemployee(){
+        
+        
+        View::display('employee/add_customer', [
+             
+           
+        ]);
+        
+    }
     
     
     
