@@ -14,7 +14,7 @@ class Parcel extends BaseController {
         $ids = array_filter($ids);
         $ids_in = implode(',', $ids);
         $ack = $this->db->write("update parcel set parcel_status = parcel_status + 1 where parcel_id in ($ids_in)");
-
+        $ack = $this->db->write("update parcel set parcel_outdate = now() where parcel_id in ($ids_in) and parcel_status = 3");
         return json([
             'status' => $ack ? true:false,
         ]);
@@ -73,7 +73,7 @@ class Parcel extends BaseController {
     }
 
     function checkout($parcel_id) {
-        
+        $this->db->write("UPDATE `parcel` SET `parcel_status` = '$in' WHERE `parcel`.`parcel_id` = $parcel_id;");
     }
 
 }
