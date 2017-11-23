@@ -1,47 +1,67 @@
 <? View::display('employee/header', []); ?>
+<style>
+    body{
+        background: #eee
+    }
+</style>
 <div class ="container">
+    <br>
+    <a href="/logout" class="waves-effect waves-light btn"><i class="material-icons left">power_settings_new</i>Logout</a>
     <div class="row">
         <div class="col s6 ">
-            <a href="/report">
+            <a href="/parcel/receive">
                 <div class="card">
                     <div class="card-image">
-                        <img src="/assets/images/reports.jpg">
+                        <img src="/assets/images/receive.jpg">
 
                     </div>
                     <div class="card-content">
-                        <h4>Reports</h4>
+                        <h4>Parcel Check-in</h4>
                     </div>
                 </div>
             </a>
         </div>
         
         <div class="col s6 ">
-            <a href="/report">
+            <a href="/parcel/checkout">
                 <div class="card">
                     <div class="card-image">
-                        <img src="/assets/images/reports.jpg">
+                        <img src="/assets/images/checkout.jpg">
 
                     </div>
                     <div class="card-content">
-                        <h4>Reports</h4>
+                        <h4>Parcel Check-out</h4>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col s6 ">
-            <a href="/report">
+            <a href="/edit/employee">
                 <div class="card">
                     <div class="card-image">
-                        <img src="/assets/images/reports.jpg">
+                        <img src="/assets/images/edit_emp.jpg">
 
                     </div>
                     <div class="card-content">
-                        <h4>Reports</h4>
+                        <h4>Edit Employees</h4>
                     </div>
                 </div>
             </a>
         </div>
         
+        <div class="col s6 ">
+            <a href="/edit/customer">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/assets/images/edit_cus.jpg">
+
+                    </div>
+                    <div class="card-content">
+                        <h4>Edit Customers</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
         <div class="col s6 ">
             <a href="/report">
                 <div class="card">

@@ -12,6 +12,8 @@ class Employee extends BaseController {
 
     function invoice() {
 
+
+
         if (!isset($_POST['p'])) {
             return redirect("/parcel/checkout");
         }
@@ -32,7 +34,7 @@ class Employee extends BaseController {
         $order_id = $this->db->insertId();
 
         foreach ($list as $parcel) {
-            
+
             $this->db->write("insert into orders_detail
              set orders_id = $order_id,
              parcel_id = {$parcel['parcel_id']}
@@ -42,7 +44,8 @@ class Employee extends BaseController {
         View::display('employee/invoice', [
             'cus_info' => $cus_info[0],
             'parcel_list' => $list,
-            'order_id' => $order_id
+            'order_id' => $order_id,
+            'total' => $total
         ]);
     }
 
@@ -72,11 +75,39 @@ class Employee extends BaseController {
 
     function editcustomer() {
 
-        $cus = $this->db->read("select * from customer");
-
+        if(isset($_GET['search'])){
+            $cus = $this->db->read("select * from customer where cus_fname like '%{$_GET['search']}%' or cus_lname like '%{$_GET['search']}%'");
+        }
+       else{
+           $cus = $this->db->read("select * from customer");
+       }
+        
 
         View::display('employee/edit_customer', [
             'cus' => $cus
+        ]);
+    }
+
+    function editcustomerform($cusid) {
+
+        $success = false;
+
+        if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['tel']) && isset($_POST['email'])) {
+           
+            $this->db->write("update customer
+                set cus_fname = '{$_POST['first_name']}',
+                    cus_lname = '{$_POST['last_name']}',
+                    cus_tel = '{$_POST['tel']}',
+                    cus_email = '{$_POST['email']}'
+                where cus_id = $cusid
+                ");
+            $success = true;
+        }
+
+        $cus = $this->db->read("select * from customer where cus_id = $cusid");
+        View::display('employee/edit_customer_form', [
+            'cus_info' => $cus[0],
+            'success' => $success
         ]);
     }
 

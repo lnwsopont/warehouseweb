@@ -15,10 +15,7 @@
     <div class="nav-wrapper">
       <a href="/employee/index" class="brand-logo center">Employee's Webpage</a>
       <ul class="left hide-on-med-and-down">
-          
-          <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+         
        
       </ul>
     </div>

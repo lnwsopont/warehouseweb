@@ -14,7 +14,13 @@
 class Web extends BaseController {
 
     function index() {
-        View::display('home');
+        if (!isLogin()) {
+            return redirect("/login");
+        }
+        if (isEmployee()) {
+            return redirect("/employee/index");
+        }
+        return redirect("/customer/index");
     }
 
 }

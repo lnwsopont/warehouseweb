@@ -17,7 +17,7 @@ $router->any("/logout", "User.logout");
 $router->any("/parcel/:num/", "Parcel.detail");
 //$router->any("/qr", "Qr.test");
 if (isCustomer()) {
-    $router->any("/", "Customer.home");
+    $router->any("/customer/index", "Customer.home");
     $router->any("/product", "Customer.product");
     $router->any("/history", "Customer.history");
     $router->any("/booking", "Customer.booking");
@@ -27,6 +27,7 @@ if (isCustomer()) {
 if (isEmployee()) {
     //$router->any("/", "Employee.report");
     $router->any("/invoice", "Employee.invoice");
+    
     $router->any("/employee/index", "Employee.index");
     $router->any("/report", "Report.main");
     $router->any("/parcel/receive", "Employee.receive");
@@ -34,6 +35,7 @@ if (isEmployee()) {
     $router->any("/edit/parcel", "Employee.editparcel");
     $router->any("/edit/employee", "Employee.editemployee");
     $router->any("/edit/customer", "Employee.editcustomer");
+    $router->any("/edit/customer/:num", "Employee.editcustomerform");
     $router->any("/parcel/checkout", "Employee.checkout");
     $router->any("/add/employee","Employee.addemployee");
     $router->any("/payment", "Employee.transaction");
