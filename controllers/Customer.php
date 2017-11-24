@@ -5,29 +5,49 @@
 // $router->any("/history", "Customer.history");
 // $router->any("/order", "Customer.order");
 // $router->any("/enquiry", "Customer.enquiry");
-echo "<a href='/product'>Home</a><br>";
-        echo "<a href='/product'>Product</a><br>";
-        echo "<a href='/history'>History</a><br>";
-        echo "<a href='/booking'>Booking</a><br>";
-        echo "<a href='/enquiry'>Enquiry</a>";
+
 class Customer extends BaseController {
-        
+
     function home() {
-        $list = $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3 order by booking_date desc");
-        echo '<pre>';
-        print_r($list);
+        $list = $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']}");
+        $cp = $pp = $bp = $fee = 0;
+        foreach($list as $x){
+            if($x['parcel_status']==0){
+                $bp++;
+            }
+            elseif($x['parcel_status']==3){
+                $pp++;
+            }
+            else{
+                $cp++;
+                $fee+=pricecalc($x['parcel_indate'], date('Y-m-d'));
+            }
+            
+        }
+        View::display('customer_home', [
+            'notification'=>$this->get_notification_number(),
+            "user" => $_SESSION['user'],
+            "current_parcel" => $cp,
+            "past_parcel" => $pp,
+            "booking_parcel" => $bp,
+            "pending_fee" => $fee
+        ]);
     }
 
     function product() {
         $list = $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3 order by booking_date desc");
-        echo '<pre>';
-        print_r($list);
+        View::display('customer_product', [
+            'notification'=>$this->get_notification_number(),
+            "parcels" => $list
+        ]);
     }
 
     function history() {
-        $list = $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status=3 order by parcel_outtdate desc");
-        echo '<pre>';
-        print_r($list);
+        $list = $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status=3 order by parcel_outdate desc");
+        View::display('customer_history', [
+            'notification'=>$this->get_notification_number(),
+            "parcels" => $list
+        ]);
     }
 
     function booking() {
@@ -36,7 +56,7 @@ class Customer extends BaseController {
 
             $des = $_POST['parcel_des'];
             if (strlen(trim($des)) < 3) {
-                View::display('customer_booking');
+                View::display('customer_booking',['notification'=>$this->get_notification_number(),]);
                 return;
             }
 
@@ -54,7 +74,7 @@ class Customer extends BaseController {
             redirect("/product");
         }
 
-        View::display('customer_booking');
+        View::display('customer_booking',['notification'=>$this->get_notification_number(),]);
     }
 
     //function order() {
@@ -89,8 +109,15 @@ class Customer extends BaseController {
 
 
         View::display("enquiry", [
+            'notification'=>$this->get_notification_number(),
             "messages" => $list
         ]);
+    }
+    
+    private function get_notification_number(){
+       $list=$this->db->read("SELECT COUNT(*) as c FROM `private_msg` WHERE status=2 and emp_id !=0 and cus_id= {$_SESSION['user']['cus_id']}");
+       
+       return $list[0]['c'];
     }
 
 }

@@ -1,24 +1,4 @@
-<html>
-    <head>
-        <title>title</title>
-
-
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-
-        <script
-            src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-        crossorigin="anonymous"></script>
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-    </head>
-    <body>
-        <div class="container">
+<? View::display('header'); ?>
 
             <form action="/enquiry" method="POST">
                 <div class="row">
@@ -61,6 +41,4 @@
                     <? endif; ?>
                 <? endforeach; ?>
             </ul>
-        </div>
-    </body>
-</html>
+<? View::display('footer'); ?>

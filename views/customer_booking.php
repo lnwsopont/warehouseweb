@@ -1,4 +1,4 @@
-<html>
+<? //View::display('header'); ?>
     <table width=50% align=center>
         <tr>
             <td>
@@ -93,6 +93,4 @@
     </table>
 
 </div>
-
-</body>
-</html>
+    <? //View::display('footer'); ?>
