@@ -19,7 +19,7 @@
          <div style="color: #fff">user or password wrong!</div>
          <?php //endif; ?>-->
     	<form action = "/login" method = "post">
-        	Username: <input type="text" name="username" value="">
+        Username: <input type="text" name="username" value="">
             <br><br>
             Password: <input type="password" name="password" value="">
             <br><br>
