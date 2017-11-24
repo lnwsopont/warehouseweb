@@ -1,0 +1,351 @@
+/*-----Gernal-----*/
+body
+{
+	font-family: Montserrat,monospace;
+	color: white;
+	margin:0;
+	padding:0;
+}
+button
+{
+	background-color: black;
+	color: white;
+	font-family: Montserrat,monospace;
+	border: none;
+	padding: 5px 10px;
+	text-align:center;
+	text-decoration: none;
+	cursor: pointer;
+}
+p
+{
+	font-family: Montserrat,monospace;
+	/*color:#d3d3d3;*/
+}
+a
+{
+	text-align: center;
+	color: white;
+	text-decoration: none;
+}
+
+/*-----Login-----*/
+.bg
+{
+	background: url("Cargo.jpg") no-repeat center center;
+	background-size: cover;
+	font-family: Montserrat,monospace;
+	font-size: 16px;
+	color: black;
+}
+#box
+{
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: #b8b8b8; 
+    opacity:0.50;
+}
+.mainmenu-login
+{
+	position:absolute;
+    left: 35%;
+    top: 37%;
+	font-size: 20px;
+}
+.mainmenu-serial
+{
+	position:absolute;
+    left: 35%;
+    top: 49.5%;
+	font-size: 20px;
+}
+.login-form
+{
+    position: absolute;
+    left: 38%;
+    top: 40%;
+}
+.serial-form
+{
+    position: absolute;
+    left: 36%;
+    top: 45%;
+}
+a:link.select, a:visited.select
+{
+	display: inline-block;
+	width: 400px;
+	height: 70px;
+	padding-top: 28px;
+    color:black;
+	text-align:center;
+    text-decoration: none;
+}
+a:hover.select , a:active.select
+{
+	display: inline-block;
+	background-color: #4d4d4d;
+	opacity: 0.8;
+	width: 400px;
+	height: 70px;
+	padding-top: 28px;
+    color:white;
+	text-align:center;
+}
+a:link.back, a:active.back
+{
+	color:black;
+    text-decoration: none;
+}
+a:hover.back, a:active.back
+{
+	color:white;
+} 
+
+/*-----Content-----*/
+.container
+{
+	position: absolute;
+	width: 90%;
+	height: 100%;
+	margin-left: 10%;
+	background-color: black;
+	overflow: auto; /*in order to make the black bg continues when there's an extra content*/
+}
+.content
+{
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-bottom:0;
+	text-align: justify;
+}
+hr
+{
+	width: 100%;
+	float: left;
+}
+
+/*-----Navigation Bar-----*/
+.navigation
+{
+	position:fixed;
+	width: 20%;
+	height:100%;
+	margin:0;
+	padding: 0;
+	float: left;
+	background: url("Cargo-fade.jpg") no-repeat center;
+	background-size: cover;
+}
+ul
+{
+	text-decoration: none;
+}
+
+li a.menu
+{
+	display: block;
+	padding: 8px 16px;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+}
+
+li a:hover.menu, .dropdown:hover
+{
+	display:block;
+	background-color: black;
+}
+
+.current
+{
+	background-color: black;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+li.dropdown {
+    display: inline-block;
+	width:100%;
+}
+
+.logout
+{
+	position:fixed;
+	bottom: 0;
+}
+
+
+/******-----Cutomer Page-----******/
+
+/*-----Contact-----*/
+input[type=text].message
+{
+	width: 100%;
+	padding: 20px;
+}
+button.send
+{
+	background-color: #f2f2f2;
+	color: black;
+	font-family: Montserrat,monospace;
+	font-size: 18px;
+	border: none;
+	padding: 10px 30px;
+	text-align:center;
+	text-decoration: none;
+	cursor: pointer;
+}
+button:hover.send
+{
+	background-color: black;
+	color: white;
+	font-family: Montserrat,monospace;
+	font-size: 18px;
+	border: 1px solid white;
+	padding: 10px 30px;
+	text-align:center;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/******-----Admin Page-----******/
+
+/*-----Customer-----*/
+.half-left
+{
+	float: left;
+    position: relative;
+    width: 49%;
+}
+.half-right
+{
+	float: right;
+    position: relative;
+    width: 49%;
+}
+
+/*-----Parcel Registration-----*/
+input[type=text].size
+{
+	width: 100%;
+	padding: 10px;
+}
+input[type=date]
+{
+	width: 100%;
+	padding: 10px;
+}
+select
+{
+    width: 100%;
+	padding: 12px;
+}
+.left /*one-thrid of the content area*/
+{
+   	float: left;
+    position: relative;
+    width: 200px;
+}
+.left-full
+{
+   	float: left;
+    position: relative;
+    width: 100%;
+}
+.right /*two-thrid of the content area*/
+{
+    float: right;
+    position: relative;
+    width: 685px;
+}
+.right-in
+{
+    float: right;
+    position: relative;
+    width: 330px;
+}
+.right-out
+{
+    float: right;
+    position: relative;
+    width: 330px;
+	padding-left: 25px;
+}
+
+/*-----Manage Storage-----*/
+table
+{
+    position: absolute;
+	font-size: 20px;
+	margin: 0 auto;
+}
+td
+{
+    border: 1px solid white;
+    padding: 70px;
+	
+}
+.overlay 
+{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=80);
+}
+.info-content 
+{
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    padding: 16px;
+    background-color: white;
+	color:black;
+    z-index:2;
+    overflow: auto;
+}
+.btn /*button for closing the lightbox*/
+{
+	background-color: black;
+	color: white;
+	font-family: Montserrat,monospace;
+	border: none;
+	padding: 5px 10px;
+	text-align:center;
+	text-decoration: none;
+}
+
+
