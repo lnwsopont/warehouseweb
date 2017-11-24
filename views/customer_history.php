@@ -1,4 +1,4 @@
-<? View::display('header'); ?>
+<? View::display('header', ['notification'=>$notification]); ?>
 <h2>HISTORY</h2>
 <table class="striped">
         <thead>

@@ -1,4 +1,4 @@
-<? View::display('header'); ?>
+<? View::display('header', ['notification'=>$notification]); ?>
 
             <form action="/enquiry" method="POST">
                 <div class="row">
