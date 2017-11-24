@@ -36,6 +36,7 @@ if (isEmployee()) {
     $router->any("/edit/employee", "Employee.editemployee");
     $router->any("/edit/customer", "Employee.editcustomer");
     $router->any("/edit/customer/:num", "Employee.editcustomerform");
+    $router->any("/edit/employee/:num", "Employee.editemployeeform");
     $router->any("/parcel/checkout", "Employee.checkout");
     $router->any("/add/employee","Employee.addemployee");
     $router->any("/payment", "Employee.transaction");

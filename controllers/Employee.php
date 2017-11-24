@@ -49,39 +49,59 @@ class Employee extends BaseController {
         ]);
     }
 
-    function editemployee() {
-
-        if (isset($_GET) && $_GET['act'] == 'search') {
-            $int = (int) $_GET['search'];
-            $emp = $this->db->read("select * from employee where emp_id = $int");
-        } else {
-            $emp = $this->db->read("select * from employee");
-        }
-    }
-
-    function editparcel() {
-
-        $parcel = $this->db->read("select * from parcel");
-
-        View::display('employee/edit_parcel', [
-            'parcel' => $parcel
-        ]);
-    }
-
     function editform() {
         View::display('employee/emp_cus_edit_form', [
         ]);
     }
 
+    function editemployee() {
+
+
+        if (isset($_GET['search'])) {
+            $emp = $this->db->read("select * from employee where emp_fname like '%{$_GET['search']}%' or emp_lname like '%{$_GET['search']}%'");
+        } else {
+            $emp = $this->db->read("select * from employee");
+        }
+
+
+        View::display('employee/edit_employee', [
+            'emp' => $emp
+        ]);
+    }
+
+    function editemployeeform($empid) {
+
+        $success = false;
+       
+
+        if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['tel'])) {
+
+            $this->db->write("update employee
+                set emp_fname = '{$_POST['first_name']}',
+                    emp_lname = '{$_POST['last_name']}',
+                    emp_tel = '{$_POST['tel']}'
+                where emp_id = $empid
+                ");
+            $success = true;
+        }
+
+        $emp = $this->db->read("select * from employee where emp_id = $empid");
+        View::display('employee/edit_employee_form', [
+            'emp_info' => $emp[0],
+            'success' => $success
+        ]);
+    }
+
     function editcustomer() {
 
-        if(isset($_GET['search'])){
+
+        if (isset($_GET['search'])) {
             $cus = $this->db->read("select * from customer where cus_fname like '%{$_GET['search']}%' or cus_lname like '%{$_GET['search']}%'");
+        } 
+        else {
+            $cus = $this->db->read("select * from customer");
         }
-       else{
-           $cus = $this->db->read("select * from customer");
-       }
-        
+
 
         View::display('employee/edit_customer', [
             'cus' => $cus
@@ -93,7 +113,7 @@ class Employee extends BaseController {
         $success = false;
 
         if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['tel']) && isset($_POST['email'])) {
-           
+
             $this->db->write("update customer
                 set cus_fname = '{$_POST['first_name']}',
                     cus_lname = '{$_POST['last_name']}',

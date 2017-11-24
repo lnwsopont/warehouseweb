@@ -5,8 +5,8 @@
     }
 </style>
 <div class ="container">
-    <br>
-    <a href="/logout" class="waves-effect waves-light btn"><i class="material-icons left">power_settings_new</i>Logout</a>
+ 
+    
     <div class="row">
         <div class="col s6 ">
             <a href="/parcel/receive">

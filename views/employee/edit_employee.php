@@ -12,6 +12,7 @@
 
         <div class="row">  
             <form class="input-field col s6">
+
                 <input type="text" name="search" >
                 <input type="submit" name="act" value="search">
             </form>
@@ -19,43 +20,44 @@
 
 
 
-        <div class ="row">
-
+        <div class ="row" id="emp-<? echo $emp['emp_id']; ?>">
             <div class="col s12">
-                
+
+
+
                 <ul class="collection">
-                    <? foreach ($emp as $emps): ?>
-                    <li class="collection-item avatar">
-                        <img src="images/yuna.jpg" alt="" class="circle">  
-                        <p>
-                           ID: <? echo $emps['emp_id'] ?><br>
-                           Name: <? echo $emps['emp_fname'] ?> 
-                           <? echo $emps['emp_lname'] ?><br>
-                           Status: <? if ($emps['emp_status'] == 1) {
+                    <? foreach ($emp as $emp): ?>
+                        <li class="collection-item">
+                            <a href="/edit/employee/<?= $emp['emp_id'] ?>">
+                                <p>
+                                    ID: <? echo $emp['emp_id'] ?><br>
+                                    Name: <? echo $emp['emp_fname'] ?> 
+                                    <? echo $emp['emp_lname'] ?><br>             
+                                    Tel:  <? echo $emp['emp_tel'] ?>  <br>
+                                    Status: <? if ($emp['emp_status'] == 1) {
                                         ?>
                                         <? echo "Active"; ?> <br>
                                     <? } else {
                                         ?>
                                         <? echo "In-Active"; ?> <br>
                                     <? } ?>
-                                        
-                          Tel:  <? echo $emps['emp_tel'] ?>    
-                           
-                        </p>
-                     
-                            <? endforeach; ?>
 
-                        </div>
-                      
+                                </p>
+                            </a>
+                        </li>
+                    <? endforeach; ?>
+
+            </div>
 
 
-                        </div>
 
+        </div>
 
 
 
 
-                        </body>
+
+</body>
 
 
 
