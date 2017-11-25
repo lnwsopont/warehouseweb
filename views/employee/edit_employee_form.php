@@ -20,6 +20,14 @@
                     <input placeholder="Placeholder" id="tel" type="text" name="tel" class="validate" value="<?= $emp_info['emp_tel'] ?>">
                     <label for="tel">Tel No.</label>
                 </div>
+                <div class="input-field col s12">
+                <select class="browser-default">
+                    <option value="" disabled selected>Choose your option</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
+                </div>
                 
             </div>
             <br>

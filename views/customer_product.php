@@ -19,8 +19,19 @@
             <td><?=$parcel['booking_code']?></td>
             <td><?=date("d M Y", strtotime($parcel['booking_date']))?></td>
             <td><?=$parcel['parcel_des']?></td>
+            <? if(empty($parcel['parcel_indate'])){?>
+            <td>Not checked in</td>
+            <? } 
+            else { ?>
             <td><?=date("d M Y", strtotime($parcel['parcel_indate']))?></td>
+            <? } ?>
+            <? if(empty($parcel['parcel_indate'])){?>
+            <td>Not checked in</td>
+            <? } 
+            else { ?>
             <td><?=number_format(pricecalc($parcel['parcel_indate'],date('Y-m-d')))?></td>
+            <? } ?>
+            
           </tr>
           <? endforeach; ?>
         </tbody>
