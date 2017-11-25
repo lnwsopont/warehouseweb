@@ -1,4 +1,6 @@
-<? //View::display('header'); ?>
+<? View::display('header', ['notification'=>$notification]); ?>
+<h2>WAREHOUSE BOOKING</h2>
+<div>
     <table width=50% align=center>
         <tr>
             <td>
@@ -55,42 +57,21 @@
                     input[type=submit]:hover {
                         background-color: #fff;
                     }
-
-                    div {
-                        border-radius: 5px;
-                        background-color: LAVENDER;
-                        padding: 20px;
-                    }
                 </style>
-        <body>
-
-
-
-            <div>
                 <form action="/booking" method="post">
-
-
-                    <header align=center>
-                        <h1>Product Information</h1>
-                    </header>
-
                     <br>
                     <label for="Parcel_type">Parcel Type</label><br>
                     <select id="Parcel_type" name="parcel_type">
                         <option value="not-fragile">Not-Fragile</option>
                         <option value="fragile">Fragile</option>
-
-                    </select>
-                    
+                    </select>                   
                     <label for="pd">Parcel Description (more than 3 characters)</label><br>
                     <input type="text" id="pd" name="parcel_des" placeholder="PLease enter your parcel description"><br>
-
                     <input type="submit" value="Create Booking">
 
                 </form>
                 </tr>
                 </td>
     </table>
-
 </div>
-    <? //View::display('footer'); ?>
+    <? View::display('footer'); ?>

@@ -1,10 +1,5 @@
 <?php
 
-//$router->any("/", "Customer.home");
-//$router->any("/product", "Customer.product");
-// $router->any("/history", "Customer.history");
-// $router->any("/order", "Customer.order");
-// $router->any("/enquiry", "Customer.enquiry");
 
 class Customer extends BaseController {
 
@@ -76,11 +71,6 @@ class Customer extends BaseController {
 
         View::display('customer_booking',['notification'=>$this->get_notification_number(),]);
     }
-
-    //function order() {
-    //$list= $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']} and parcel_status!=3 order by booking_date desc");
-    //View::display('orderout',['parcel'=> $list]);  
-    // }
 
     function enquiry() {
 
