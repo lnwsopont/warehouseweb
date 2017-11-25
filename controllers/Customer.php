@@ -1,6 +1,4 @@
 <?php
-
-
 class Customer extends BaseController {
 
     function home() {
