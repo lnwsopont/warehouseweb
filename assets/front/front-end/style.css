@@ -2,7 +2,7 @@
 body
 {
 	font-family: Montserrat,monospace;
-	color: white;
+	color: black;
 	margin:0;
 	padding:0;
 }
@@ -15,8 +15,8 @@ img
 }
 button
 {
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 	font-family: Montserrat,monospace;
 	border: none;
 	padding: 5px 10px;
@@ -32,7 +32,7 @@ p
 a
 {
 	text-align: center;
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 table
@@ -43,14 +43,14 @@ table
 }
 th
 {
-	background-color: white;
-    color: black;
+	background-color: black;
+    color: white;
 	padding: 20px;
 }
-tr:hover.highlight
+tr:hover
 {
-	background-color: white;
-	color: black;
+	background-color: black;
+	color: white;
 }
 td
 {
@@ -123,28 +123,27 @@ a:hover.select , a:active.select
 	width: 400px;
 	height: 70px;
 	padding-top: 28px;
-    color:white;
+    color:black;
 	text-align:center;
 }
 a:link.back, a:active.back
 {
-	color:black;
+	color:white;
     text-decoration: none;
 }
 a:hover.back, a:active.back
 {
-	color:white;
+	color:black;
 } 
 
 /*-----Content-----*/
 .container
 {
 	position: absolute;
-	width: 90%;
+	width: 85%;
 	height: 100%;
-	margin-left: 10%;
-	margin-right: 10%;
-	background-color: black;
+	margin-left: 15%;
+	background-color: white;
 	overflow: auto; /*in order to make the black bg continues when there's an extra content*/
 }
 .content
@@ -164,7 +163,7 @@ hr
 .navigation
 {
 	position:fixed;
-	width: 10%;
+	width: 15%;
 	height:100%;
 	margin:0;
 	padding: 0;
@@ -172,6 +171,7 @@ hr
 	background: url("Cargo-fade.jpg") no-repeat center;
 	background-size: cover;
 }
+
 ul
 {
 	text-decoration: none;
@@ -188,13 +188,21 @@ li a.menu
 
 li a:hover.menu, .dropdown:hover
 {
+	color:black;
 	display:block;
-	background-color: black;
+	background-color: white;
+	
+}
+.dropdown:hover
+{
+	display:block;
+	background-color: white;
 }
 
 .current
 {
-	background-color: black;
+	color:black;
+	background-color: white;
 }
 .dropdown-content {
     display: none;
@@ -206,7 +214,7 @@ li a:hover.menu, .dropdown:hover
 }
 
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -253,7 +261,7 @@ a.dash
 	background-color: #f2f2f2;
 	border: 1px solid #f2f2f2;
 	border-radius: 50%;
-	padding: 65px 16px;
+	padding: 52px 16px;
 }
 a:hover.dash
 {
@@ -263,7 +271,7 @@ a:hover.dash
 	background-color: black;
 	border: 1px solid white;
 	border-radius: 50%;
-	padding: 65px 16px;
+	padding: 52px 16px;
 }
 /*------Enquiry------*/
 input[type=text].enq
@@ -452,14 +460,14 @@ td.store
     width:45%;
 	height:30%;
     float: right;
-    color:white;
+    color:black;
 }
 .container-left
 {
     width:45%;
 	height:30%;
     float:left;
-    color:white;
+    color:black;
 }
 /*--Login Footer--*/
 .foot-login
