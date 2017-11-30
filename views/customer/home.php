@@ -8,7 +8,7 @@
 
 <ul class="navigation">
 	<li>
-		<img src="/whm/Logo.jpg">
+		<img src="/assets/front/front-end/Logo.jpg">
 	</li>
 	<li>
 		<a href="home.php" class="menu current" style="color:black;">
