@@ -1,42 +1,42 @@
 <html>
 <head>
 	<title>H o m e</title>
-        <link rel = "stylesheet" type="text/css" href="/assets/front/front-end/style.css">
+	<link rel = "stylesheet" type="text/css" href="/whm/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <ul class="navigation">
 	<li>
-            <img src="/assets/front/front-end/Logo.jpg">
+		<img src="/whm/Logo.jpg">
 	</li>
 	<li>
-		<a href="home.php" class="menu current">
-			<i class = "fa fa-home" style="font-size: 40px;"></i>
+		<a href="home.php" class="menu current" style="color:black;">
+			<i class = "fa fa-home" style="font-size: 30px;"></i>
 			<p>HOME</p>
 		</a>
 	</li>
 	<li>
 		<a href="history.php" class="menu">
-			<i class = "fa fa-history" style="font-size: 40px;"></i>
+			<i class = "fa fa-history" style="font-size: 30px;"></i>
 			<p>HISTORY</p>
 		</a>
 	</li>
 	<li>
 		<a href="product.php" class="menu">
-			<i class = "fa fa-archive" style="font-size: 40px;"></i>
+			<i class = "fa fa-archive" style="font-size: 30px;"></i>
 			<p>PRODUCT</p>
 		</a>
 	</li>
 	<li>
 		<a href="booking.php" class="menu">
-			<i class = "fa fa-bookmark" style="font-size: 40px;"></i>
+			<i class = "fa fa-bookmark" style="font-size: 30px;"></i>
 			<p>BOOKING</p>
 		</a>
 	</li>
 	<li>
 		<a href="enquiry.php" class="menu">
-			<i class = "fa fa-envelope" style="font-size: 40px;"></i>
+			<i class = "fa fa-envelope" style="font-size: 30px;"></i>
 			<p>MESSAGE(0)</p>
 		</a>
 	</li>
@@ -47,7 +47,6 @@
 		</a>
 	</li>
 </ul>
-
 <div class="container">
 	<div class="content">
 		<div class="head"><h1>H O M E</h1></div>
