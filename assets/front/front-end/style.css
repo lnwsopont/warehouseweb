@@ -143,6 +143,7 @@ a:hover.back, a:active.back
 	width: 90%;
 	height: 100%;
 	margin-left: 10%;
+	margin-right: 10%;
 	background-color: black;
 	overflow: auto; /*in order to make the black bg continues when there's an extra content*/
 }
