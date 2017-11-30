@@ -12,31 +12,31 @@
 	</li>
 	<li>
 		<a href="home.php" class="menu">
-			<i class = "fa fa-home" style="font-size: 40px;"></i>
+			<i class = "fa fa-home" style="font-size: 30px;"></i>
 			<p>HOME</p>
 		</a>
 	</li>
 	<li>
 		<a href="history.php" class="menu">
-			<i class = "fa fa-history" style="font-size: 40px;"></i>
+			<i class = "fa fa-history" style="font-size: 30px;"></i>
 			<p>HISTORY</p>
 		</a>
 	</li>
 	<li>
 		<a href="product.php" class="menu">
-			<i class = "fa fa-archive" style="font-size: 40px;"></i>
+			<i class = "fa fa-archive" style="font-size: 30px;"></i>
 			<p>PRODUCT</p>
 		</a>
 	</li>
 	<li>
 		<a href="booking.php" class="menu">
-			<i class = "fa fa-bookmark" style="font-size: 40px;"></i>
+			<i class = "fa fa-bookmark" style="font-size: 30px;"></i>
 			<p>BOOKING</p>
 		</a>
 	</li>
 	<li>
 		<a href="enquiry.php" class="menu current" style="color:black;>
-			<i class = "fa fa-envelope" style="font-size: 40px;"></i>
+			<i class = "fa fa-envelope" style="font-size: 30px;"></i>
 			<p>MESSAGE(0)</p>
 		</a>
 	</li>

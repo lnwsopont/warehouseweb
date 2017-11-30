@@ -42,7 +42,7 @@
 	</li>
 	<li>
 		<a href="#" class="menu">
-			<i class = "fa fa-sign-out" style="font-size: 40px;"></i>
+			<i class = "fa fa-sign-out" style="font-size: 30px;"></i>
 			<p>LOGOUT</p>
 		</a>
 	</li>

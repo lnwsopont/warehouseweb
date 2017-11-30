@@ -258,10 +258,10 @@ a.dash
 	display:inline-block;
 	width:20%;
 	color: black;
-	background-color: #f2f2f2;
-	border: 1px solid #f2f2f2;
+	background-color: #993300;
+	border: 1px solid #993300;
 	border-radius: 50%;
-	padding: 30px 16px;
+	padding: 30px 5px;
 }
 a:hover.dash
 {
@@ -271,7 +271,7 @@ a:hover.dash
 	background-color: black;
 	border: 1px solid white;
 	border-radius: 50%;
-	padding: 52px 16px;
+	padding: 30px 5px;
 }
 /*------Enquiry------*/
 input[type=text].enq
