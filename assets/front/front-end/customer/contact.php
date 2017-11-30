@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>C o n t a c t&nbsp;</title>
-	<link rel = "stylesheet" type="text/css" href="../style.css">
+	<link rel = "stylesheet" type="text/css" href="/whm/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>

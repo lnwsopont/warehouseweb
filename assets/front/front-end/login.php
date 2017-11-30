@@ -2,6 +2,8 @@
 <head>
 	<title>Company's Name</title>
 	<link rel = "stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<img src="/whm/Head.jpg">
 </head>
 <body class="bg">
 <p id="demo"></p>
@@ -33,6 +35,16 @@
 		</form><br>
         <a href="javascript:(0)" class="back" onclick="hide2()">Back</a>
 	</div>
+	
+	<footer class="foot-login">
+		<div class="container-login">
+			<h2>Contact Information</h2>
+				<span><i class = "fa fa-map-marker" style="font-size: 20px;"></i> Bangkok, Thailand</span>&nbsp;&nbsp;&nbsp;
+				<span><i class = "fa fa-phone" style="font-size: 20px;"></i> Phone: (+66)2-123-4567</span>&nbsp;&nbsp;&nbsp;
+				<span><i class = "fa fa-envelope" style="font-size: 20px;"></i> Email: name.example@mail.com</span>&nbsp;&nbsp;&nbsp;
+				<br><br><br>
+			</div>
+	</footer>
     
 <script>
 	var l = document.getElementById("login");

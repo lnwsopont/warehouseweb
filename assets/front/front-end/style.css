@@ -6,6 +6,13 @@ body
 	margin:0;
 	padding:0;
 }
+img
+{
+	margin:0;
+	padding:0;
+	width: 100%;
+	height:auto;
+}
 button
 {
 	background-color: black;
@@ -28,6 +35,29 @@ a
 	color: white;
 	text-decoration: none;
 }
+table
+{
+	margin: 0 auto;
+	border-collapse: collapse;
+	width: 100%;
+}
+th
+{
+	background-color: white;
+    color: black;
+	padding: 20px;
+}
+tr:hover.highlight
+{
+	background-color: white;
+	color: black;
+}
+td
+{
+	border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
 
 /*-----Login-----*/
 .bg
@@ -41,7 +71,7 @@ a
 #box
 {
     position: absolute;
-    left: 35%;
+    left: 37%;
     top: 30%;
     width: 400px;
     height: 300px;
@@ -52,28 +82,28 @@ a
 .mainmenu-login
 {
 	position:absolute;
-    left: 35%;
+    left: 37%;
     top: 37%;
 	font-size: 20px;
 }
 .mainmenu-serial
 {
 	position:absolute;
-    left: 35%;
+    left: 37%;
     top: 49.5%;
 	font-size: 20px;
 }
 .login-form
 {
     position: absolute;
-    left: 38%;
+    left: 41%;
     top: 40%;
 }
 .serial-form
 {
     position: absolute;
-    left: 36%;
-    top: 45%;
+    left: 42%;
+    top: 34%;
 }
 a:link.select, a:visited.select
 {
@@ -133,7 +163,7 @@ hr
 .navigation
 {
 	position:fixed;
-	width: 20%;
+	width: 10%;
 	height:100%;
 	margin:0;
 	padding: 0;
@@ -201,6 +231,56 @@ li.dropdown {
 
 /******-----Cutomer Page-----******/
 
+/*------Home------*/
+.head
+{
+	text-align: left;
+	float:left;
+}
+.intro
+{
+	text-align: right;
+	float:right;
+}
+
+/*------Dashboard------*/
+a.dash
+{
+	display:inline-block;
+	width:20%;
+	color: black;
+	background-color: #f2f2f2;
+	border: 1px solid #f2f2f2;
+	border-radius: 50%;
+	padding: 65px 16px;
+}
+a:hover.dash
+{
+	display:inline-block;
+	width:20%;
+	color: white;
+	background-color: black;
+	border: 1px solid white;
+	border-radius: 50%;
+	padding: 65px 16px;
+}
+/*------Enquiry------*/
+input[type=text].enq
+{
+	width: 85%;
+	padding: 20px;
+	float:left;
+    border: 0;
+	outline: 0;
+	background: transparent;
+	border-bottom: 2px solid white;
+	color: white;
+}
+.enq
+{
+	float:right;
+}
+
 /*-----Contact-----*/
 input[type=text].message
 {
@@ -213,7 +293,7 @@ button.send
 	color: black;
 	font-family: Montserrat,monospace;
 	font-size: 18px;
-	border: none;
+	border: 1px solid white;
 	padding: 10px 30px;
 	text-align:center;
 	text-decoration: none;
@@ -231,6 +311,7 @@ button:hover.send
 	text-decoration: none;
 	cursor: pointer;
 }
+
 
 /******-----Admin Page-----******/
 
@@ -297,16 +378,20 @@ select
 }
 
 /*-----Manage Storage-----*/
-table
+table.store
 {
-    position: absolute;
 	font-size: 20px;
 	margin: 0 auto;
 }
-td
+tr:hover.store
+{
+	background-color: none;
+}
+td.store
 {
     border: 1px solid white;
     padding: 70px;
+	text-align: center;
 	
 }
 .overlay 
@@ -327,10 +412,10 @@ td
 {
     display: none;
     position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
+    top: 30%;
+    left:30%;
+    width: 30%;
+    height: 30%;
     padding: 16px;
     background-color: white;
 	color:black;
@@ -346,6 +431,59 @@ td
 	padding: 5px 10px;
 	text-align:center;
 	text-decoration: none;
+	float:right;
 }
 
+/*------Footer------*/
+.foot
+{
+    display: block;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    margin:0;
+    padding:0;
+    float:left;
+	overflow:hidden;
+}
+.container-right
+{
+    width:45%;
+	height:30%;
+    float: right;
+    color:white;
+}
+.container-left
+{
+    width:45%;
+	height:30%;
+    float:left;
+    color:white;
+}
+/*--Login Footer--*/
+.foot-login
+{
+    display: block;
+    position:fixed;
+	background-color: black;
+    bottom:0;
+    width:100%;
+    margin:0;
+    padding:0;
+    float:left;
+	
+}
+.container-login
+{
+	height:30%;
+	text-align: center;
+    color:white;
+}
+.container-left
+{
+    width:45%;
+	height:30%;
+    float:left;
+    color:white;
+}
 
