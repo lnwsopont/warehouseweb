@@ -18,6 +18,7 @@ $router->any("/parcel/:num/", "Parcel.detail");
 //$router->any("/qr", "Qr.test");
 if (isCustomer()) {
     $router->any("/customer/index", "Customer.home");
+    $router->any("/test/home","Customer.test");
     $router->any("/product", "Customer.product");
     $router->any("/history", "Customer.history");
     $router->any("/booking", "Customer.booking");

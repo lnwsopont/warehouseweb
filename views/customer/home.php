@@ -1,14 +1,14 @@
 <html>
 <head>
 	<title>H o m e</title>
-	<link rel = "stylesheet" type="text/css" href="/whm/style.css">
+        <link rel = "stylesheet" type="text/css" href="/assets/front/front-end/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <ul class="navigation">
 	<li>
-		<img src="/whm/Logo.jpg">
+            <img src="/assets/front/front-end/Logo.jpg">
 	</li>
 	<li>
 		<a href="home.php" class="menu current">

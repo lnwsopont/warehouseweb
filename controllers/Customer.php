@@ -1,5 +1,16 @@
 <?php
 class Customer extends BaseController {
+    
+    
+    function test(){
+        
+        
+        
+        
+        View::display("/customer/home", [
+           
+        ]);
+    }
 
     function home() {
         $list = $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']}");

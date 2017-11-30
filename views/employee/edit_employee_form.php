@@ -21,14 +21,13 @@
                     <label for="tel">Tel No.</label>
                 </div>
                 <div class="input-field col s12">
-                <select class="browser-default">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                </select>
+                    <select name="status">
+                        <option value="1" <? if($emp_info['emp_status']==1){echo "selected";}?>>Active</option>
+                        <option value="0" <? if($emp_info['emp_status']==0){echo "selected";}?>>In-Active</option>
+                    </select>
+                    <label>Status</label>
                 </div>
-                
+
             </div>
             <br>
             <button class="btn waves-effect waves-light" type="submit" name="action">Edit
@@ -39,3 +38,9 @@
         </form>
     </div>
 </div>
+
+<script>
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+</script>

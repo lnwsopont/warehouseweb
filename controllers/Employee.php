@@ -74,12 +74,13 @@ class Employee extends BaseController {
         $success = false;
        
 
-        if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['tel'])) {
+        if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['tel']) && isset($_POST['status']) ) {
 
             $this->db->write("update employee
                 set emp_fname = '{$_POST['first_name']}',
                     emp_lname = '{$_POST['last_name']}',
-                    emp_tel = '{$_POST['tel']}'
+                    emp_tel = '{$_POST['tel']}',
+                    emp_status  = {$_POST['status']}
                 where emp_id = $empid
                 ");
             $success = true;
