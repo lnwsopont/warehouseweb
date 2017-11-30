@@ -1,14 +1,14 @@
 <html>
 <head>
 	<title>P r o d u c t</title>
-	<link rel = "stylesheet" type="text/css" href="/whm/style.css">
+	<link rel = "stylesheet" type="text/css" href="/assets/front/front-end/style1.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
 <ul class="navigation">
 	<li>
-		<img src="/whm/Logo.jpg">
+		<img src="/assets/front/front-end/Logo.gif">
 	</li>
 	<li>
 		<a href="home.php" class="menu">
@@ -23,7 +23,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="product.php" class="menu current">
+		<a href="product.php" class="menu current" style="color:black;>
 			<i class = "fa fa-archive" style="font-size: 40px;"></i>
 			<p>PRODUCT</p>
 		</a>

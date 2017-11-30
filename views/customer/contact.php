@@ -26,7 +26,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="contact.php" class="menu current">
+		<a href="contact.php" class="menu current" style="color:black;>
 			<i class = "fa fa-envelope" style="font-size: 50px;"></i>
 			<p>CONTACT</p>
 		</a>

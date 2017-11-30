@@ -79,8 +79,8 @@
 					<br><br><br><br><br><hr>
 			<footer>
 				<div class="container-left">
-					<h2>MUIC Warehouse Project</h2>
-					<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your safety is our highest priority. We commit to provide the lowest fares with our ‘Price Beat Guarantee’. 
+					<h2 style="color:black;">MUIC Warehouse Project</h2>
+					<p style="color:black;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your safety is our highest priority. We commit to provide the lowest fares with our ‘Price Beat Guarantee’. 
 					Our team are always here to help, 24 hours a day, 7 days a week. 
 					We’ll let you know your choices if your flight is changed before you travel and and keep you updated and provide options if things don’t go to plan on the day. 
 					You will get what you paid for and you can have confidence in how quickly we will respond to an issue. We share your passion for protecting our environment. 
