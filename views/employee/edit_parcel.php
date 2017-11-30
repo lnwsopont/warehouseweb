@@ -1,9 +1,6 @@
 <? View::display('employee/header', []); ?>
-<body>
-
-    <div class ="container">
-
-        <div class ="row">
+<div style="margin-bottom: 150px;">
+<div class ="row">
             <div class="col s12">
                 <h1>Edit Parcel</h1>
             </div>
@@ -52,12 +49,7 @@
 
 
                         </div>
-
-
-
-
-
-                        </body>
+</div>
 
 
 

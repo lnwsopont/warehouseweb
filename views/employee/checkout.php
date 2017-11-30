@@ -43,7 +43,6 @@
                 <div class ="row">
                     <div class="col s12">
                         <button class="btn waves-effect waves-light" type="submit" name="action">Payment
-                            <i class="material-icons right">send</i>
                         </button>
 
                     </div>
@@ -57,9 +56,8 @@
                     <label for="cus_id">Customer ID</label>
                 </div>
                 <button class="btn waves-effect waves-light" type="submit">Search
-                    <i class="material-icons right">send</i>
                 </button>
             </form>
         <? endif; ?>
     </div>
-    </div>
+    

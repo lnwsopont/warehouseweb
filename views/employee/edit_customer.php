@@ -1,9 +1,6 @@
 <? View::display('employee/header', []); ?>
-<body>
-
-    <div class ="container">
-
-        <div class ="row">
+<div style="margin-bottom: 200px;">
+      <div class ="row">
             <div class="col s12">
                 <h1>Edit Customers</h1>
                 <i class="ac_unit"></i>
@@ -17,8 +14,8 @@
             <form class="input-field col s6">
                 
                 
-                <input type="text" name="search" >
-                <input type="submit" name="act" value="search">
+                <input type="text" name="search" placeholder="Customer Name">
+                <input class="btn waves-effect waves-light" type="submit" name="act" value="search">
             </form>
         </div>
 
@@ -50,7 +47,7 @@
 
 
     </div>
-</body>
+</div>
 
 
 
