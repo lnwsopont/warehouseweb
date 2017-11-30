@@ -3,14 +3,41 @@ class Customer extends BaseController {
     
     
     function test(){
-        
-        
-        
-        
         View::display("/customer/home", [
            
         ]);
     }
+    function prodtest()
+    {
+        View::display("/customer/product", [
+           
+        ]);
+    }
+    function hist_test()
+    {
+        View::display("/customer/history", [
+           
+        ]);
+    }
+    function book_test()
+    {
+        View::display("/customer/booking", [
+           
+        ]);
+    }
+    function order_test()
+    {
+        View::display("/customer/order", [
+           
+        ]);
+    }
+    function enq_test()
+    {
+        View::display("/customer/enquiry", [
+           
+        ]);
+    }
+
 
     function home() {
         $list = $this->db->read("select * from parcel where cus_id = {$_SESSION['user']['cus_id']}");
