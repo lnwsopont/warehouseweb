@@ -1,5 +1,5 @@
 <? View::display('employee/header', []); ?>
-<div class="container">
+
     <? if ($success): ?>
         <blockquote>
             edit success
@@ -55,3 +55,4 @@
   
   
 </script>
+<? View::display('footer'); ?>

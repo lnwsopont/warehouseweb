@@ -1,8 +1,5 @@
 <? View::display('employee/header', []); ?>
-<body>
-
-    <div class ="container">
-
+<div style="margin-bottom: 150px;">
         <div class ="row">
             <div class="col s12">
                 <h1>Parcel Check-out</h1>
@@ -65,25 +62,4 @@
             </form>
         <? endif; ?>
     </div>
-
-
-
-
-
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</html>
+    </div>

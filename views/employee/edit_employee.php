@@ -1,7 +1,7 @@
 <? View::display('employee/header', []); ?>
-<body>
 
-    <div class ="container">
+
+    <? //<div class ="container"> ?>
 
         <div class ="row">
             <div class="col s12">
@@ -53,11 +53,7 @@
 
         </div>
 
-
-
-
-
-</body>
+<? View::display('footer'); ?>
 
 
 

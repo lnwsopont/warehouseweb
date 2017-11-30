@@ -31,4 +31,5 @@
                 <a class="waves-effect waves-light btn" href='/logout'>LOGOUT</a>
                 </div>
             </div>
+        
 

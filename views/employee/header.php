@@ -27,21 +27,6 @@
                     <a class="waves-effect waves-light btn" href="/report">Reports</a>
                     <a class="waves-effect waves-light btn" href="/edit/customer">Customer</a>
                     <a class="waves-effect waves-light btn" href="/edit/employee">Employee</a>    
-                    <a class="waves-effect waves-light btn" href='/logout'>logout</a>
+                    <a class="waves-effect waves-light btn" href='/logout'>Logout</a>
                 </div>
             </div>
-    
-    <?// <nav>
-         //<div class="nav-wrapper">
-            
-
-            //<ul class="left hide-on-med-and-down">
-                //<li><a class="dropdown-button" href="#!" data-activates="dropdown2">Edit<i class="material-icons right">mode_edit</i></a></li>
-                //<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Parcel<i class="material-icons right">inbox</i></a></li>
-               // <li></li>
-           // </ul>
-              
-            //</ul>
-        //</div> 
-    //</nav>?>
-    <div>

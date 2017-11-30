@@ -1,6 +1,6 @@
 <? View::display('employee/header',[]); ?>
     
-
+<div style="margin-bottom: 200px;">
     <body>
         <div class="container">
             <!-- Page Content goes here -->
@@ -67,4 +67,5 @@
             </form>
         </div>
     </body>
+    </div>
 
