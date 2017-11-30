@@ -7,6 +7,7 @@
               <th>Booking Code</th>
               <th>Booking Date</th>
               <th>Description</th>
+              <th>Shelf</th>
               <th>Check-in Date</th>
               <th>Current Cost (฿)</th>
           </tr>
@@ -19,6 +20,7 @@
             <td><?=$parcel['booking_code']?></td>
             <td><?=date("d M Y", strtotime($parcel['booking_date']))?></td>
             <td><?=$parcel['parcel_des']?></td>
+             <td><?=$parcel['shelf_code']?></td>
             <? if(empty($parcel['parcel_indate'])){?>
             <td>Not checked in</td>
             <? } 

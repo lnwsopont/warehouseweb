@@ -75,15 +75,28 @@ class Employee extends BaseController {
        
 
         if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['tel']) && isset($_POST['status']) ) {
-
-            $this->db->write("update employee
+           
+            if($_POST['status'] == 0){
+                 $this->db->write("update employee
                 set emp_fname = '{$_POST['first_name']}',
                     emp_lname = '{$_POST['last_name']}',
                     emp_tel = '{$_POST['tel']}',
-                    emp_status  = {$_POST['status']}
+                    emp_status  = {$_POST['status']},
+                    left_date = now()
+                where emp_id = $empid
+                ");
+                $success = true;
+            }
+           else{ $this->db->write("update employee
+                set emp_fname = '{$_POST['first_name']}',
+                    emp_lname = '{$_POST['last_name']}',
+                    emp_tel = '{$_POST['tel']}',
+                    emp_status  = {$_POST['status']},
+                        left_date = NULL
                 where emp_id = $empid
                 ");
             $success = true;
+           }
         }
 
         $emp = $this->db->read("select * from employee where emp_id = $empid");
