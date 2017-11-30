@@ -99,7 +99,8 @@ class Customer extends BaseController {
                     cus_id = {$_SESSION['user']['cus_id']},
                     parcel_status=0,
                     parcel_type ='{$_POST['parcel_type']}',
-                    booking_code = '$booking_code'
+                    booking_code = '$booking_code',
+                    booking_date = now()
                 ");
 
             redirect("/product");
