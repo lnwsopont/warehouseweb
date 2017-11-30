@@ -261,8 +261,7 @@ a.dash
 	background-color: #f2f2f2;
 	border: 1px solid #f2f2f2;
 	border-radius: 50%;
-	padding: 50px 15px;
-	padding-right: 10%;
+	padding: 30px 15px;
 }
 a:hover.dash
 {
@@ -272,8 +271,7 @@ a:hover.dash
 	background-color: black;
 	border: 1px solid black;
 	border-radius: 50%;
-	padding: 50px 15px;
-	padding-right: 10%;
+	padding: 30px 15px;
 }
 
 /*------Enquiry------*/
