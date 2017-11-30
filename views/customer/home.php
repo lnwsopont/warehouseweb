@@ -8,7 +8,7 @@
 
 <ul class="navigation">
 	<li>
-		<img src="/assets/front/front-end/Logo.jpg">
+		<img src="/assets/front/front-end/Logo.gif">
 	</li>
 	<li>
 		<a href="home.php" class="menu current" style="color:black;">
