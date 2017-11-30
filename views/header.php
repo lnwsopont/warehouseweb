@@ -28,7 +28,7 @@
                     <a class="waves-effect waves-light btn" href='/history'>HISTORY</a>
                     <a class="waves-effect waves-light btn" href='/booking'>BOOKING</a>
                     <a class="waves-effect waves-light btn" href='/enquiry'>MESSAGE (<?=$notification?>)</a>
-                <a class="waves-effect waves-light btn" href='/logout'>logout</a>
+                <a class="waves-effect waves-light btn" href='/logout'>LOGOUT</a>
                 </div>
             </div>
 
