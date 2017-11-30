@@ -64,15 +64,15 @@
 						<h4>CURRENT PARCEL</h4>
 						<p>6</p>
 					</a>
-					<a href="history.php" class="dash-2">
+					<a href="history.php" class="dash">
 						<h4>PAST PARCEL</h4>
 						<p>6</p>
 					</a>
-					<a href="product.php" class="dash-3">
+					<a href="product.php" class="dash">
 						<h4>BOOKING PARCEL</h4>
 						<p>3</p>
 					</a>
-					<a href="product.php" class="dash-4">
+					<a href="product.php" class="dash">
 						<h4>PENDING FEE</h4>
 						<p>฿ 64,800</p>
 					</a>
