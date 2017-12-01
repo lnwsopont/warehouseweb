@@ -159,7 +159,7 @@ class Employee extends BaseController {
         if (isset($_GET['cus_id'])) {
             $cusid = $_GET['cus_id'];
 
-            $parcel_all = $this->db->read("select * from parcel where parcel_status = 3 and cus_id = $cusid and parcel_id not in (select parcel_id from orders_detail) ");
+            $parcel_all = $this->db->read("select * from parcel where parcel_status = 2 and cus_id = $cusid and parcel_id not in (select parcel_id from orders_detail) ");
 
 
 
