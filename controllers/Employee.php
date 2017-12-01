@@ -39,6 +39,8 @@ class Employee extends BaseController {
              set orders_id = $order_id,
              parcel_id = {$parcel['parcel_id']}
                  ");
+             $shelf = $parcel['shelf_code'];
+             $this->db->write("update shelf set shelf_status =0 where shelf_code = '$shelf'");
         }
         $cus_info = $this->db->read("select * from customer where cus_id = {$parcel['cus_id']}");
         View::display('employee/invoice', [
@@ -202,7 +204,7 @@ class Employee extends BaseController {
                 return;
             }
             $this->db->write("update parcel set parcel_status = 1 , shelf_code = '$shelf',parcel_indate = NOW()  where parcel_id = $parcelid ");
-            $this->db->write("update shelf set shelf_code =1");
+            $this->db->write("update shelf set shelf_status =1 where shelf_code = '$shelf'");
             View::display('employee/receive', [
                 'parcel_id' => $parcelid,
                 'shelfs' => $shelfs
